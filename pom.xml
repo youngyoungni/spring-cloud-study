@@ -65,6 +65,30 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+	
+	<!-- 构建 -->
+	<build>
+		<!-- 名称 -->
+		<finalName>microservicecloud</finalName>
+		<!-- 允许访问 “src/mian/resources” 下的资源 -->
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<configuration>
+					<delimiters>
+						<delimit>$</delimit>
+					</delimiters>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 	<!-- 子项目列表 -->
 	<modules>
@@ -76,6 +100,8 @@
 		<module>microservicecloud-consumer-dept-8080</module>
 		<!-- eureka服务注册和发现中心 -->
 		<module>microservicecloud-eureka-7001</module>
+		<module>microservicecloud-eureka-7002</module>
+		<module>microservicecloud-eureka-7003</module>
 	</modules>
-	
+
 </project>
