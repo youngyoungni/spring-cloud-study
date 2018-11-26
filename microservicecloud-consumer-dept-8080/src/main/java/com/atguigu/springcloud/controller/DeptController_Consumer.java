@@ -18,7 +18,9 @@ import com.atguigu.springcloud.entities.Dept;
 @RestController
 public class DeptController_Consumer {
 	
-	private static final String REST_URL_PREFIX = "http://localhost:8001";
+	// 单机版	private static final String REST_URL_PREFIX = "http://localhost:8001";
+	// 集群版，按微服务名称访问服务地址，不需要在担心服务的地址(URL)和端口（port）
+	private static final String REST_URL_PREFIX = "http://MICROSERVICECLOUD-DEPT";
 	
 	@Autowired
 	private RestTemplate restTemplate;
