@@ -27,7 +27,7 @@ public class ConfigBean {
 		 * RestTemplate：	提供了多种便捷访问远程HTTP服务的方法；
 		 * 					一种访问restful服务模板类；
 		 * 					是Spring提供用于访问Rest服务的客户端模板的工具集。
-		 * 使用方式：
+		 * 	使用方式：
 		 * 		只需三个参数 (url,requestMap,ResponseBean.class)
 		 * 		url：		Rest请求地址
 		 * 		requestMap：	请求参数
@@ -35,4 +35,6 @@ public class ConfigBean {
 		 */
 		return new RestTemplate();
 	} 
+	
+	
 }
