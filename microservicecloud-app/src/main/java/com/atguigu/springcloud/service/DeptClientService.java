@@ -9,7 +9,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.atguigu.springcloud.entities.Dept;
 
-@FeignClient(value = "MICROSERVICECLOUD-DEPT")
+/**
+ * 	@deprecated：	修改 microservicecloud-app 工程，根据已有的 DeptClientService 接口
+ * 					新建一个实现 FallbackFactory接口的类 
+ * 	@author Youngni
+ *
+ */
+@FeignClient(value = "MICROSERVICECLOUD-DEPT"
+			, fallbackFactory = DeptClientServiceFallbackFactory.class)
 public interface DeptClientService {
 
 	@RequestMapping(value = "/dept/get/{id}", method = RequestMethod.GET)

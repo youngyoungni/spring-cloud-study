@@ -11,7 +11,7 @@ import com.atguigu.springcloud.entities.Dept;
 import com.atguigu.springcloud.service.DeptClientService;
 
 /**
- * 服务消費者控制器
+ * 	服务消費者控制器
  * 
  * @author Youngni
  *
