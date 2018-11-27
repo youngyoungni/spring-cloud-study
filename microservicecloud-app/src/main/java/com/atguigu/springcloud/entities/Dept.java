@@ -2,20 +2,15 @@ package com.atguigu.springcloud.entities;
 
 import java.io.Serializable;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.experimental.Accessors;
-
 
 /**
  * @author Youngni
  * Dept(Entity orm) mysql->dept(table) 类表映射
  */
-@AllArgsConstructor
-@NoArgsConstructor
-@Data
-@Accessors(chain = true)
+//@AllArgsConstructor
+//@NoArgsConstructor
+//@Data
+//@Accessors(chain = true)
 public class Dept implements Serializable{
 	
 	/**
@@ -75,6 +70,4 @@ public class Dept implements Serializable{
 	public void setDb_source(String db_source) {
 		this.db_source = db_source;
 	}
-
-	
 }
